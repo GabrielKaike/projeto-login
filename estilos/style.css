@@ -38,10 +38,9 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
-
+    transform: translate(-50%, -50%);
     transition: width 0.4s, height 0.4s;
     transition-timing-function: ease;
 }
@@ -85,15 +84,40 @@ form > input[type=submit]:hover{
 
 form > div.campo{
     background-color: var(--lilas);
+    border: 2px solid var(--lilas);
     width: 100%;
     display: block;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px 5px 0px;
 }
 
 form label {
     display: none;
+}
+
+div.campo > span{
+    color: white;
+
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input{ 
+    background-color: #94f1ee;
+    font-size: 1em;
+    width: calc(100% - 44.4px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12.5px);
+}
+
+div.campo > input:focus-within{
+    background-color: white;
+    border: none;
 }
 
 form > a.botao{
@@ -118,4 +142,7 @@ form > a.botao:hover{
 
 form > a.botao > span{
     font-size: 0.8em;
+}
+div#formulario p {
+    margin: 20px 0px;
 }
